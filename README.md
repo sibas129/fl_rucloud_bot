@@ -10,15 +10,24 @@ pip install -r requirements.txt
 в dotenv закидываем данные для бдшки и токен бота
 ```
 
-3. Ставим alembic, инициализируем его, заполняем alembic.ini и прононяем миграции
+3. Ставим alembic и инициализируем его, заполняем alembic.ini и прононяем миграции
 ```
 pip install alembic
 alembic init alembic
+```
+
+4. Заполняем alembic.ini и alembic/env.py
+```
+в alembic.ini правим строку соединения с бд, в env.py импортируем базовый класс и берем от него Base.metadata
+```
+
+5. Прогоняем миграции
+```
 alembic revision --autogenerate -m "first migration"
 alembic upgrade head
 ```
 
-4. Запуск бота
+6. Запуск бота
 ```bash
 python main.py
 ```
