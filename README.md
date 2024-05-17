@@ -13,15 +13,12 @@ pip install -r requirements.txt
 3. Ставим alembic, инициализируем его, заполняем alembic.ini и прононяем миграции
 ```
 pip install alembic
-```
 alembic init alembic
-```
 alembic revision --autogenerate -m "first migration"
-```
 alembic upgrade head
 ```
 
-3. Запуск бота
+4. Запуск бота
 ```bash
 python main.py
 ```
