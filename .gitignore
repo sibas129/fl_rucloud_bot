@@ -4,6 +4,5 @@ __pycache__/
 .DS_Store
 .env
 alembic.ini
-alembic/
 temp/
 test.py
