@@ -7,22 +7,23 @@ def get() -> ReplyKeyboardMarkup:
     builder = InlineKeyboardBuilder()
     builder.row(
         types.InlineKeyboardButton(
-            text="📂 Список моих событий", callback_data=f"test"
+            text="🏢 Здесь будет", callback_data=f"test"
         ),
     )
     builder.row(
         types.InlineKeyboardButton(
-            text="🏢 Запланировать событие", callback_data=f"test"
-        ),
-        types.InlineKeyboardButton(
-            text="⚙️ Изменить видимость календаря", callback_data=f"test"
+            text="🏢 список организаций", callback_data=f"test"
         ),
     )
     builder.row(
         types.InlineKeyboardButton(
-            text="💬 Открыть календарь в браузере",
-            url="https://nextcloud.prosto-web.agency",
-        )
+            text="🏢 в которых вы состоите", callback_data=f"test"
+        ),
+    )
+    builder.row(
+        types.InlineKeyboardButton(
+            text="💎🏢 и которыми владеете", callback_data=f"test"
+        ),
     )
     builder.row(
         types.InlineKeyboardButton(text="🔙 В главное меню", callback_data="main_menu")

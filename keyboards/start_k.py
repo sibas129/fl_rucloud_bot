@@ -7,17 +7,17 @@ def get() -> ReplyKeyboardMarkup:
     builder = InlineKeyboardBuilder()
     builder.row(
         types.InlineKeyboardButton(
-            text="📂 Личный workspace", callback_data=f"personalspace_main"
+            text="📂 Личные файлы", callback_data=f"personal_main"
         ),
     )
     builder.row(
         types.InlineKeyboardButton(
-            text="🏢 Рабочий workspace", callback_data=f"workspace_main"
+            text="🏢 Мои организации", callback_data=f"organizations_main"
         ),
     )
     builder.row(
         types.InlineKeyboardButton(
-            text="⚙️ Настройки аккаунта", callback_data=f"preferences_main"
+            text="⚙️ Настройки аккаунта", callback_data=f"settings_main"
         ),
         types.InlineKeyboardButton(
             text="📆 Календарь событий", callback_data=f"calendar_main"
