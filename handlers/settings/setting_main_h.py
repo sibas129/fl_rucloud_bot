@@ -1,8 +1,8 @@
 from aiogram import Router, F
-from aiogram.types import CallbackQuery, FSInputFile
-from keyboards.settings import setting_main_k
 from aiogram.enums.parse_mode import ParseMode
+from aiogram.types import CallbackQuery, FSInputFile
 
+from keyboards.settings import setting_main_k
 
 router = Router()
 
@@ -14,7 +14,10 @@ async def main_menu(callback: CallbackQuery) -> None:
     markup_inline = setting_main_k.get()
     await callback.message.answer_photo(
         photo=photo,
-        caption="> ⚙️ Это раздел настроек аккаунта, здесь вы можете поменять имя или статус, а также добавить новую организацию\.\nУправление ее будет доступно в разделе '🏢 Мои организации'",
+        caption=(
+                "> ⚙️ Это раздел настроек аккаунта, здесь вы можете поменять пароль или статус"
+        ),
         reply_markup=markup_inline,
         parse_mode=ParseMode.MARKDOWN_V2
     )
+
